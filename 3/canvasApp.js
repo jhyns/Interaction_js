@@ -4,12 +4,9 @@ import { Smile } from './smile.js'
 export class CanvasApp extends CanvasBase {
   constructor(data={}) {
     super(data.bgColor || '#00f')
-    // this.dark = data.dark || false
     this.groundColor = data.groundColor || '#000'
     this.color = data.color || '#fff'
     this.initSpeed = data.initSpeed || .1
-    // this.posX = (data.xFactor || .4) * this.canvasWidth
-    // this.posY = (1 - (data.groundFactor || .2)) * this.canvasHeight
     this.xFactor = data.xFactor || .4
     this.groundFactor = data.groundFactor || .2
     this.skyColor = data.dark ? '#121212' : '#fafafa'
