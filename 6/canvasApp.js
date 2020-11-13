@@ -2,8 +2,8 @@ import { CanvasBase } from '../global/canvasBase.js'
 import { Person } from './person.js'
 
 export class CanvasApp extends CanvasBase {
-  constructor(data) {
-    super(data.bgColor)
+  constructor(data={}) {
+    super({bgColor: data.bgColor})
     this.x = this.canvasWidth / 2
     this.y = this.canvasHeight / 2
     this.person = new Person({

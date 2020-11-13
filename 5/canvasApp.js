@@ -2,8 +2,8 @@ import { CanvasBase } from '../global/canvasBase.js'
 import { Star } from './star.js'
 
 export class CanvasApp extends CanvasBase {
-  constructor(data) {
-    super(data.bgColor)
+  constructor(data={}) {
+    super({bgColor: data.bgColor})
     this.color = data.color || '#fff'
     this.groundColor = data.groundColor || '#121212'
     this.groundFactor = 1 - data.groundFactor || .7

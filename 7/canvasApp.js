@@ -2,7 +2,7 @@ import { WebglCanvasBase } from '../global/canvasBase.js'
 import { Ball } from './ball.js'
 
 export class CanvasApp extends WebglCanvasBase {
-  constructor(data) {
+  constructor(data={}) {
     super()
     this.color = data.color || 'vec4(.9, .9, .9, 1.0)'
     this.bgColor = data.bgColor || 'vec4(.0, .0, .0, 1.0)'

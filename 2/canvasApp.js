@@ -3,7 +3,7 @@ import { Point } from './point.js'
 
 export class CanvasApp extends CanvasBase {
   constructor(data={}) {
-    super(data.bgColor || '#fff')
+    super({bgColor: data.bgColor})
     this.speed = data.speed || 10
     this.canvas.addEventListener('click', e => this.click(e))
     this.point = []

@@ -3,7 +3,7 @@ import { Ball } from './ball.js'
 
 export class CanvasApp extends CanvasBase {
   constructor(data={}) {
-    super(data.bgColor || '#fff')
+    super({bgColor: data.bgColor})
     this.canvas.addEventListener('click', e => this.clickCanvas(e))
   }
   

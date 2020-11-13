@@ -7,7 +7,7 @@ import {
 } from './bubble.js'
 
 export class CanvasApp extends CanvasBase {
-  constructor(data) {
+  constructor(data={}) {
     super({bgColor: data.bgColor})
     this.topBgColor = data.topBgColor
     this.bottomBgColor = data.bottomBgColor

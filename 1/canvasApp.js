@@ -2,8 +2,8 @@ import { CanvasBase } from '../global/canvasBase.js'
 import { Point } from './point.js'
 
 export class CanvasApp extends CanvasBase {
-  constructor(data) {
-    super(data.bgColor)
+  constructor(data={}) {
+    super({bgColor: data.bgColor})
     this.drawReady = true
     this.mouseX = 0
     this.mouseY = 0

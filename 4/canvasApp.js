@@ -2,8 +2,8 @@ import { CanvasBase } from '../global/canvasBase.js'
 import { Ball } from './ball.js'
 
 export class CanvasApp extends CanvasBase {
-  constructor(data) {
-    super(data.bgColor)
+  constructor(data={}) {
+    super({bgColor: data.bgColor})
     this.groundColor = data.groundColor || 'brown'
     this.acc = data.acc || 1
     this.bounce = data.bounce || .5

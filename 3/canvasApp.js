@@ -3,7 +3,7 @@ import { Smile } from './smile.js'
 
 export class CanvasApp extends CanvasBase {
   constructor(data={}) {
-    super(data.bgColor || '#00f')
+    super({bgColor: data.bgColor})
     this.groundColor = data.groundColor || '#000'
     this.color = data.color || '#fff'
     this.initSpeed = data.initSpeed || .1
