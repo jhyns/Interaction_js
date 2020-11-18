@@ -24,9 +24,10 @@ export class Bubble {
     if (x && y) {
       const dx = this.x - x
       const dy = this.y - y
-      if (dx * dx + dy * dy < this.r * this.r * 5) {
-        this.vx += dx * .003
-        this.vy += dy * .003
+      const dist = Math.sqrt(dx * dx + dy * dy)
+      if (dist < this.r) {
+        this.vx += dx * (1 - dist / this.r) * .03
+        this.vy += dy * (1 - dist / this.r) * .03
       } else {
         this.setSpeed()
       }
