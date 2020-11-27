@@ -9,19 +9,17 @@ export class CanvasBase {
     this.canvas = document.createElement('canvas')
     this.ctx = this.canvas.getContext('2d')
     this.bgColor = bgColor
-    this.ctx.fillStyle = bgColor
+    document.body.style.backgroundColor = bgColor
     const dpr = window.devicePixelRatio || 1
     const bsr = this.ctx.webkitBackingStorePixelRatio ||
     this.ctx.mozBackingStorePixelRatio ||
     this.ctx.backingStorePixelRatio || 1
-    const scale = Math.max(2, dpr / bsr)
-    this.canvas.width = window.innerWidth * scale
-    this.canvas.height = window.innerHeight * scale
+    this.scale = Math.max(2, dpr / bsr)
+    this.canvas.width = window.innerWidth * this.scale
+    this.canvas.height = window.innerHeight * this.scale
     this.canvasWidth = window.innerWidth
     this.canvasHeight = window.innerHeight
-    this.ctx.fillStyle = this.bgColor
-    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
-    this.ctx.scale(scale, scale)
+    this.ctx.scale(this.scale, this.scale)
   }
 
   resizeCanvas() {
@@ -37,8 +35,6 @@ export class CanvasBase {
     this.canvas.height = height * scale
     this.canvasWidth = width
     this.canvasHeight = height
-    ctx.fillStyle = this.bgColor
-    ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.scale(scale, scale)
   }
 }
