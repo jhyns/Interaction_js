@@ -1,16 +1,14 @@
-import {
-  Phone
-} from './phone.js'
+import { Phone } from './phone.js';
 
 (() => {
   new Phone({
-    x: .5,
-    y: .5,
-    size: .4,
-    dialButtonRad: .45,
+    x: 0.5,
+    y: 0.5,
+    size: 0.4,
+    dialButtonRad: 0.45,
     fingerStopRad: 1,
     callFunction: number => {
-      window.location.href = number * 1
+      window.location.href = number * 1;
     },
-  })
-})()
+  });
+})();
